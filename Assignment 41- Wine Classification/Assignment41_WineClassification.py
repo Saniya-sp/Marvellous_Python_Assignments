@@ -110,7 +110,16 @@ def MarvellousClassifier(DataPath):
 
     
     model = KNeighborsClassifier(n_neighbors=9)
-    model = model.fit(X_train_scaled, Y_train)
+
+    ##########################################
+    #Step 7: Train the model
+    ##########################################
+
+    model = model.fit(X_train_scaled, Y_train) 
+
+    ##########################################
+    #Step 8: Test the model
+    ##########################################
     Y_pred = model.predict(X_test_scaled)
     
     print("accuracy: ",accuracy_score(Y_test, Y_pred) * 100)
