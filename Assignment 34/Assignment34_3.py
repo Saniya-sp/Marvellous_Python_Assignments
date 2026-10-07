@@ -1,9 +1,9 @@
-"""Design automation script which display information of running processes as its name, PID, Username
+"""Design automation script which accept directory name from user and create logfile in that directory which contains 
+information of running process as its name, PID, username 
 
-Command: python Assignment34_1.py Marvellous_Logs
+Command: python Assignment34_3.py Marvellous_Logs
 
 """
-
 
 #scheduler added
 import psutil
@@ -35,18 +35,16 @@ def display_processes(FolderName):
     print(f"Log file gets successully created with name : {FileName}")
 
     print(f"Log file gets successully created with name : {FileName}")
-    
     fobj.write(Border+"\n")
     fobj.write("____Marvellous Platform Survillence System____")
-    fobj.write(Border+"\n")
-    
     fobj.write("Logfile gets created at : "+timestamp+"\n")
 
     fobj.write(Border+"\n")
     fobj.write("---------------System Report---------------")
 
     fobj.write("\n\n\n\n")
- 
+   
+
     for process in psutil.process_iter(['name', 'pid', 'username']):
         try:
             name = process.info['name']
@@ -70,13 +68,13 @@ def display_processes(FolderName):
             pass
 
         except TypeError as e:
-            # print("Exception: ",str(e))
+            print("Exception: ",str(e))
             fobj.write("Exception: " + str(e))
 
-    fobj.write(Border+"\n\n")
+    fobj.write(Border+"\n")
     fobj.write("--------------End of log file---------------")
     fobj.write(Border+"\n")
-
+    
     fobj.close()
 
 

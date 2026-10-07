@@ -41,12 +41,7 @@ def Find_Process(FolderName, process_name):
     fobj.write(Border+"\n")
     fobj.write("---------------System Report---------------")
 
-    fobj.write("\n\n\n\n")
-
-    fobj.write(Border+"\n")
-    fobj.write("--------------End of log file---------------")
-    fobj.write(Border+"\n")
-    
+    fobj.write("\n\n\n\n")   
 
     found = False
 
@@ -84,6 +79,10 @@ def Find_Process(FolderName, process_name):
     if not found:
         print(f"\nProcess '{process_name}' is not running.")
         fobj.write("\nProcess " + process_name + " is not running.")
+
+    fobj.write(Border+"\n")
+    fobj.write("--------------End of log file---------------")
+    fobj.write(Border+"\n")
 
     fobj.close()
 
