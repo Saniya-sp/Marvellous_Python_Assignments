@@ -155,7 +155,7 @@ def main():
         #Always use separate temporary/testing account
         sender_email = "pathansaniya00@gmail.com"
         #App password generated from Google account
-        app_password = "ztwu boeu iqwj eana"
+        app_password = "ztwu boeu **** ****"
         #Your second email for testing
         receiver_email = "saniyapathan3618@gmail.com"
         subject = 'Test mail'
